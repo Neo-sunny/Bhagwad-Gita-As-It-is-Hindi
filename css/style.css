@@ -31,3 +31,28 @@ body {
   color: #9b1c1c;
   font-weight: bold;
 }
+
+.site-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.site-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chapter-list li {
+  margin-bottom: 12px;
+}
+
+.chapter-list a {
+  text-decoration: none;
+  color: #6b1b1b;
+  font-weight: bold;
+}
