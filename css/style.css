@@ -1,1 +1,18 @@
+body {
+  font-family: "Noto Serif Devanagari", serif;
+  background: #f4d9ad;
+  max-width: 720px;
+  margin: auto;
+  padding: 30px 20px;
+  line-height: 1.8;
+}
+
+.verse {
+  margin-bottom: 20px;
+}
+
+.verse-label {
+  color: #9b1c1c;
+  font-weight: bold;
+}
 
