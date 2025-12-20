@@ -66,3 +66,35 @@ body {
   display: block;   /* ensures new line */
   margin-bottom: 2px;
 }
+
+.chapter-header {
+  max-width: 720px;
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.chapter-number {
+  font-size: 20px;
+  color: #7a3e2e;
+  margin-bottom: 6px;
+}
+
+.chapter-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.chapter-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.chapter-summary {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  max-width: 620px;
+  margin: 0 auto;
+}
