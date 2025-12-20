@@ -56,3 +56,13 @@ body {
   color: #6b1b1b;
   font-weight: bold;
 }
+.simple-meaning {
+  margin-top: 6px;
+  padding-left: 10px;
+  font-style: normal;
+}
+
+.simple-meaning strong {
+  display: block;   /* ensures new line */
+  margin-bottom: 2px;
+}
