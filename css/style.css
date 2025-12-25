@@ -1,10 +1,50 @@
+:root {
+  --reader-font-size: 18px;
+  --reader-line-height: 1.9;
+  --reader-max-width: 720px;
+  --bg-color: #f4d9ad;
+  --text-color: #111;
+  --surface-color: #f9e8c6;
+  --link-color: #6b1b1b;
+  --border-color: rgba(0,0,0,0.08);
+  --bg-color-dark: #111;
+  --text-color-dark: #f5f1e6;
+  --surface-color-dark: #1c1c1c;
+  --link-color-dark: #f1c27d;
+  --border-color-dark: rgba(255,255,255,0.12);
+}
+
 body {
   font-family: "Noto Serif Devanagari", serif;
-  background: #f4d9ad;
-  max-width: 720px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  max-width: var(--reader-max-width);
   margin: auto;
   padding: 40px 20px;
-  line-height: 1.9;
+  line-height: var(--reader-line-height);
+  font-size: var(--reader-font-size);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+body.lines-narrow {
+  --reader-max-width: 640px;
+}
+
+body.lines-wide {
+  --reader-max-width: 900px;
+}
+
+body[data-theme="dark"] {
+  background: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+body[data-theme="dark"] a {
+  color: var(--link-color-dark);
+}
+
+a {
+  color: var(--link-color);
 }
 
 .chapter-title {
@@ -24,7 +64,7 @@ body {
 
 .text-line {
   margin-bottom: 18px;
-  line-height: 1.9;
+  line-height: var(--reader-line-height);
 }
 
 .text-label {
@@ -94,7 +134,7 @@ body {
 .chapter-summary {
   font-size: 16px;
   line-height: 1.7;
-  color: #333;
+  color: inherit;
   max-width: 620px;
   margin: 0 auto;
 }
@@ -105,7 +145,7 @@ body {
   gap: 1.2rem;
   padding: 0.8rem 0;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid var(--border-color);
   font-family: inherit;
 }
 
@@ -116,14 +156,27 @@ body {
 
 .control-btn {
   background: transparent;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 0.3rem 0.6rem;
   font-size: 0.9rem;
   cursor: pointer;
-  color: #4a3b2a;
+  color: inherit;
 }
 
 .control-btn:hover {
-  background: rgba(0,0,0,0.05);
+  background: var(--surface-color);
+}
+
+body[data-theme="dark"] .reading-controls {
+  border-color: var(--border-color-dark);
+}
+
+body[data-theme="dark"] .control-btn {
+  border-color: var(--border-color-dark);
+  background: transparent;
+}
+
+body[data-theme="dark"] .control-btn:hover {
+  background: var(--surface-color-dark);
 }
